@@ -38,4 +38,17 @@ attr_reader :artists, :photographs
     end
   end
 
+  def artists_with_multiple_photographs
+    artist_ids = @photographs.map do |photograph|
+      photograph.artist_id
+    end
+    duplicate = artist_ids.detect do |id|
+      artist_ids.count(id) > 1
+    end
+    [find_artist_by_id(duplicate)]
+  end
+
+  
+
+
 end
