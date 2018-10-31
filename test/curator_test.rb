@@ -249,5 +249,5 @@ class CuratorTest < Minitest::Test
 
     assert_equal [], curator.photographs_taken_by_artists_from("Argentina")
   end
-g
+
 end
