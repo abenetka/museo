@@ -48,7 +48,14 @@ attr_reader :artists, :photographs
     [find_artist_by_id(duplicate)]
   end
 
-  
+  def photographs_taken_by_artists_from(country)
+    @artists.find_all do |artist|
+      artist.country == country
+    end
+  end
+
+
+
 
 
 end
